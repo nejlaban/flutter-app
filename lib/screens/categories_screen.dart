@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-import './category_items_screen.dart';
 import '../widgets/bottom_navigation_bar.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 
@@ -95,18 +94,6 @@ class CategoriesScreen extends StatelessWidget {
             ),
           ),
         ],
-      ),
-      floatingActionButton: FloatingActionButton(
-        child: Icon(
-          Icons.star,
-        ),
-        onPressed: () {
-          Navigator.of(
-            context,
-          ).pushNamed(
-            CategoryItemsScreen.routeName,
-          );
-        },
       ),
       bottomNavigationBar: CustomBottomNavigationBar(),
     );
