@@ -22,12 +22,23 @@ class _MyAppState extends State<MyApp> {
       ),
       initialRoute: '/',
       routes: {
-        '/': (context) => CategoriesScreen(),
-        CategoryItemsScreen.routeName: (context) => CategoryItemsScreen(),
+        '/': (
+          context,
+        ) =>
+            CategoriesScreen(),
+        CategoryItemsScreen.routeName: (
+          context,
+        ) =>
+            CategoryItemsScreen(),
       },
-      onUnknownRoute: (settings) {
+      onUnknownRoute: (
+        settings,
+      ) {
         return MaterialPageRoute(
-          builder: (ctx) => CategoriesScreen(),
+          builder: (
+            ctx,
+          ) =>
+              CategoriesScreen(),
         );
       },
     );

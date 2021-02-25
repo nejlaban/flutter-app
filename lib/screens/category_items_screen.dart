@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../widgets/bottom_navigation_bar.dart';
+
 class CategoryItemsScreen extends StatelessWidget {
   static const routeName = '/category-items';
 
@@ -20,27 +22,44 @@ class CategoryItemsScreen extends StatelessWidget {
             ),
             elevation: 5,
             margin: EdgeInsets.all(10),
-            child: Text('Frizerski Salon 1'),
+            child: Text(
+              'Frizerski Salon 1',
+            ),
           ),
           Card(
             shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(15),
+              borderRadius: BorderRadius.circular(
+                15,
+              ),
             ),
             elevation: 5,
-            margin: EdgeInsets.all(10),
-            child: Text('Frizerski Salon 2'),
+            margin: EdgeInsets.all(
+              10,
+            ),
+            child: Text(
+              'Frizerski Salon 2',
+            ),
           ),
           Card(
-            color: Theme.of(context).accentColor,
+            color: Theme.of(
+              context,
+            ).accentColor,
             shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(15),
+              borderRadius: BorderRadius.circular(
+                15,
+              ),
             ),
             elevation: 5,
-            margin: EdgeInsets.all(10),
-            child: Text('Frizerski Salon 3'),
+            margin: EdgeInsets.all(
+              10,
+            ),
+            child: Text(
+              'Frizerski Salon 3',
+            ),
           ),
         ],
       ),
+      bottomNavigationBar: CustomBottomNavigationBar(),
     );
   }
 }
