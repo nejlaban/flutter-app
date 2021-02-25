@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_app/screens/profile_screen.dart';
 import 'package:flutter_app/screens/reservations_screen.dart';
 
 import '../screens/category_items_screen.dart';
@@ -72,7 +73,13 @@ class CustomBottomNavigationBar extends StatelessWidget {
           ).primaryColor,
           icon: FloatingActionButton(
             elevation: 0,
-            onPressed: () {},
+            onPressed: () {
+              Navigator.of(
+                context,
+              ).pushNamed(
+                ProfileScreen.routeName,
+              );
+            },
             child: Icon(
               Icons.account_circle_outlined,
               color: Colors.white,

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_app/screens/profile_screen.dart';
 
 import './screens/category_items_screen.dart';
 import './screens/categories_screen.dart';
@@ -35,6 +36,10 @@ class _MyAppState extends State<MyApp> {
           context,
         ) =>
             ReservationsScreen(),
+        ProfileScreen.routeName: (
+          context,
+        ) =>
+            ProfileScreen(),
       },
       onUnknownRoute: (
         settings,
