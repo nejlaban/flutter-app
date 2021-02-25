@@ -55,14 +55,15 @@ class CategoriesScreen extends StatelessWidget {
               height: 100,
               color: Colors.blue[200],
               child: const Center(
-                  child: Text(
-                'Wellness',
-                textAlign: TextAlign.center,
-                style: TextStyle(
-                  fontWeight: FontWeight.bold,
-                  fontSize: 25,
+                child: Text(
+                  'Wellness',
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 25,
+                  ),
                 ),
-              )),
+              ),
             ),
             SizedBox(
               height: 30,
