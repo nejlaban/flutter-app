@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import './screens/category_items_screen.dart';
 import './screens/categories_screen.dart';
+import './screens/reservations_screen.dart';
 
 void main() => runApp(MyApp());
 
@@ -30,6 +31,10 @@ class _MyAppState extends State<MyApp> {
           context,
         ) =>
             CategoryItemsScreen(),
+        ReservationsScreen.routeName: (
+          context,
+        ) =>
+            ReservationsScreen(),
       },
       onUnknownRoute: (
         settings,
