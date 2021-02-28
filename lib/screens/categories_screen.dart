@@ -45,55 +45,63 @@ class CategoriesScreen extends StatelessWidget {
           ),
         ),
       ),
-      body: ListView(
-        children: [
-          CarouselSlider(
-            items: [
-              Container(
-                margin: EdgeInsets.all(25.0),
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(10.0),
-                  image: DecorationImage(
-                    image: NetworkImage(
-                        "https://media-cdn.tripadvisor.com/media/photo-s/10/f4/49/ef/hair-salon.jpg"),
-                    fit: BoxFit.cover,
+      body: Center(
+        child: ListView(
+          padding: const EdgeInsets.all(120),
+          children: <Widget>[
+            Container(
+              height: 100,
+              color: Colors.blue[600],
+              child: const Center(
+                child: Text(
+                  'Frizerski saloni',
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 25,
                   ),
                 ),
               ),
-
-              //2nd Image of Slider
-              Container(
-                margin: EdgeInsets.all(25.0),
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(10.0),
-                  image: DecorationImage(
-                    image: NetworkImage(
-                        "https://i.ytimg.com/vi/QZbuj3RJcjI/maxresdefault.jpg"),
-                    fit: BoxFit.cover,
-                  ),
-                ),
-              ),
-              Container(
-                margin: EdgeInsets.all(25.0),
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(10.0),
-                  image: DecorationImage(
-                    image: NetworkImage(
-                        "https://www.romania-insider.com/sites/default/files/styles/article_large_image/public/featured_images/dentist-office.jpg"),
-                    fit: BoxFit.cover,
-                  ),
-                ),
-              ),
-            ],
-            options: CarouselOptions(
-              height: 180.0,
-              enlargeCenterPage: true,
-              autoPlay: true,
-              aspectRatio: 16 / 9,
-              viewportFraction: 0.8,
             ),
-          ),
-        ],
+            SizedBox(
+              height: 30,
+            ),
+            Container(
+              height: 100,
+              color: Colors.blue[400],
+              child: const Center(
+                child: Text(
+                  'Kozmeticki saloni',
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 25,
+                  ),
+                ),
+              ),
+            ),
+            SizedBox(
+              height: 30,
+            ),
+            Container(
+              height: 100,
+              color: Colors.blue[200],
+              child: const Center(
+                child: Text(
+                  'Wellness',
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 25,
+                  ),
+                ),
+              ),
+            ),
+            SizedBox(
+              height: 30,
+            ),
+          ],
+        ),
       ),
       bottomNavigationBar: CustomBottomNavigationBar(),
     );

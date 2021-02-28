@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_app/screens/profile_screen.dart';
 
+import './screens/category_item_screen.dart';
+import './screens/profile_screen.dart';
 import './screens/category_items_screen.dart';
 import './screens/categories_screen.dart';
 import './screens/reservations_screen.dart';
+import './screens/employees_screen.dart';
 
 void main() => runApp(MyApp());
 
@@ -40,6 +42,14 @@ class _MyAppState extends State<MyApp> {
           context,
         ) =>
             ProfileScreen(),
+        CategoryItemScreen.routeName: (
+          context,
+        ) =>
+            CategoryItemScreen(),
+        EmployeesScreen.routeName: (
+          context,
+        ) =>
+            EmployeesScreen(),
       },
       onUnknownRoute: (
         settings,
