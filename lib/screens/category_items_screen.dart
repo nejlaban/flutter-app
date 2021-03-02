@@ -72,47 +72,74 @@ class CategoryItemsScreen extends StatelessWidget {
       ),
       body: ListView(
         children: [
-          Card(
-            shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(15),
-            ),
-            elevation: 5,
-            margin: EdgeInsets.all(
-              20,
-            ),
-            child: Text(
-              'Frizerski Salon 1',
-            ),
-          ),
-          Card(
-            shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(
-                15,
+          GestureDetector(
+            onTap: () {
+              Navigator.of(
+                context,
+              ).pushNamed(
+                CategoryItemScreen.routeName,
+              );
+            },
+            child: Card(
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(15),
+              ),
+              elevation: 5,
+              margin: EdgeInsets.all(
+                20,
+              ),
+              child: Text(
+                'Frizerski Salon 1',
               ),
             ),
-            elevation: 5,
-            margin: EdgeInsets.all(
-              20,
-            ),
-            child: Text(
-              'Frizerski Salon 2',
-            ),
           ),
-          Card(
-            color: Theme.of(
-              context,
-            ).accentColor,
-            shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(
-                15,
+          GestureDetector(
+            onTap: () {
+              Navigator.of(
+                context,
+              ).pushNamed(
+                CategoryItemScreen.routeName,
+              );
+            },
+            child: Card(
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(
+                  15,
+                ),
+              ),
+              elevation: 5,
+              margin: EdgeInsets.all(
+                20,
+              ),
+              child: Text(
+                'Frizerski Salon 2',
               ),
             ),
-            elevation: 5,
-            margin: EdgeInsets.all(
-              20,
-            ),
-            child: Text(
-              'Frizerski Salon 3',
+          ),
+          GestureDetector(
+            onTap: () {
+              Navigator.of(
+                context,
+              ).pushNamed(
+                CategoryItemScreen.routeName,
+              );
+            },
+            child: Card(
+              color: Theme.of(
+                context,
+              ).accentColor,
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(
+                  15,
+                ),
+              ),
+              elevation: 5,
+              margin: EdgeInsets.all(
+                20,
+              ),
+              child: Text(
+                'Frizerski Salon 3',
+              ),
             ),
           ),
         ],
