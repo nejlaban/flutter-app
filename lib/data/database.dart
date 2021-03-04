@@ -8,11 +8,15 @@ import 'package:sembast/sembast_io.dart';
 class AppDatabase {
   static final AppDatabase _singleton = AppDatabase._();
 
-  static AppDatabase get instance => _singleton;
+  static AppDatabase get instance => _singleton; // accessor
+// we can access singleton instance from other classes using this getter
 
   AppDatabase._(); //constructor
 
-  Completer<Database> _dbOpenCompleter;
+  Completer<Database>
+      _dbOpenCompleter; // used for transforming synchronous code into asynchronous
+
+  // database object accessor
 
   Future<Database> get database async {
     if (_dbOpenCompleter == null) {
