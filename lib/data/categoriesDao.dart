@@ -28,4 +28,25 @@ class CategoriesDao {
       return category;
     }).toList();
   }
+
+  Future insert(Categories categories) async {
+    await _categoriesStore.add(await _db, categories.toMap());
+  }
+
+  Future update(Categories categories) async {
+    final finder = Finder(filter: Filter.byKey(categories.id));
+    await _categoriesStore.update(
+      await _db,
+      categories.toMap(),
+      finder: finder,
+    );
+  }
+
+  Future delete(Categories categories) async {
+    final finder = Finder(filter: Filter.byKey(categories.id));
+    await _categoriesStore.delete(
+      await _db,
+      finder: finder,
+    );
+  }
 }
